@@ -1,0 +1,86 @@
+@import "styles/variables.scss";
+
+.popup_level_container {
+    min-width: 298px !important;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: $bg-0;
+    flex-direction: column;
+    .header {
+        width: 100%;
+        background-color: $bg-50;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 8px;
+        max-width: 266px;
+        height: 35px;
+        position: relative;
+        &::after {
+            width: 60px;
+            height: 60px;
+            content: "";
+            // position: absolute;
+            background-image: url("/images/award.svg");
+            background-repeat: no-repeat;
+            background-size: 60px;
+            background-position: top right;
+            margin-bottom: 17px;
+            margin-right: -40px;
+        }
+        .title {
+            font-size: $text-2xs;
+            font-weight: $font-semi-bold;
+            line-height: $line-height;
+            text-transform: uppercase;
+            max-width: 76px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: $bg-300;
+            &.title_point {
+                justify-content: left;
+            }
+        }
+    }
+    .body {
+        width: 100%;
+        max-width: 266px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 38px;
+            .level {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+            }
+            .point {
+                justify-content: left;
+            }
+        }
+        .row:nth-child(even) {
+            background-color: #F6FBFF;
+        }
+        .button {
+            margin-top: 20px;
+            display: none;
+        }
+    }
+    @media screen and (max-width: $mobile) {
+        padding: 16px 8px;
+        .body {
+            .button {
+                display: block;
+            }
+        }
+    }
+}

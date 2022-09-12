@@ -1,0 +1,101 @@
+@import "styles/variables.scss";
+
+.footer {
+  color: $bg-400;
+
+  .navigator {
+    display: flex;
+    justify-content: space-between;
+    .left_col {
+      margin-right: 5rem;
+      width: fit-content;
+
+      .logo {
+        position: relative;
+        height: 40px;
+        width: 90px;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+
+      .social_row {
+        display: flex;
+        flex-direction: row;
+
+        .social_image {
+          position: relative;
+          margin-right: 15px;
+          height: 40px;
+          width: 40px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .right_col {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 50px;
+      column-gap: 50px;
+      width: 70%;
+
+      .nav {
+        width: 18%;
+        font-size: $text-sm;
+        .header {
+          color: $bg-500;
+          font-size: $text-md;
+          font-weight: $font-semi-bold;
+        }
+        .item_container {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 20px;
+
+          .label {
+            cursor: pointer;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  .rights {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $bg-100;
+    padding: 16px 0;
+    margin-top: 16px;
+    font-size: $text-xs;
+    color: $bg-400;
+  }
+
+  @media screen and (max-width: $mobile) {
+    .navigator {
+      flex-direction: column;
+      .left_col {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .right_col {
+        width: 100%;
+        justify-content: space-between;
+        column-gap: 0px;
+
+        .nav {
+          width: 31%;
+        }
+      }
+    }
+    .rights {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}

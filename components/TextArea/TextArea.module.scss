@@ -1,0 +1,30 @@
+@import "styles/variables.scss";
+
+.textarea {
+  width: 100%;
+  font-weight: $font-light;
+  font-size: $text-md;
+  text-overflow: ellipsis;
+  border: 1px solid #E2E4E9;
+  outline: 1px solid #E2E4E9;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  line-height: $line-height;
+  background-color: transparent;
+  padding: $p-lg;
+
+  &:focus {
+    border: 1px solid #E2E4E9;
+  }
+}
+
+.filled {
+  background-color: $bg-50;
+}
+
+.disabled {
+  .container {
+    background-color: $bg-100;
+    border: none;
+  }
+}

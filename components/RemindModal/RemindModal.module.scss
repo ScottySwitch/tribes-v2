@@ -1,0 +1,59 @@
+@use "styles/variables.scss" as *;
+
+.modal_contaier {
+  max-width: 578px;
+  padding: 32px;
+  position: relative;
+  border-radius: $border-radius;
+  .folder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+    text-align: center;
+    margin-bottom: 34px;
+    .title {
+      font-weight: $font-bold;
+      color: $dark-0;
+      line-height: $line-height;
+      font-size: $text-xl;
+      margin-bottom: 16px;
+      .text {
+        font-size: $text-md;
+        line-height: $line-height;
+      }
+    }
+  }
+  .action_buttons {
+    display: flex;
+    justify-content: space-between;
+    .button {
+      padding: 10px 12px;
+      width: 130px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .modal_contaier {
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .modal_contaier {
+    padding: 15px;
+  }
+
+  .action_buttons {
+    display: flex;
+    justify-content: space-between;
+    .button {
+      width: max-content !important ;
+      padding: 10px 12px;
+      font-size: $text-sm;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@import "styles/variables.scss";
+
+.popup_point_container {
+  max-width: 359px !important;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: $bg-0;
+  flex-direction: column;
+  .header {
+    width: 100%;
+    background-color: $bg-50;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    height: 35px;
+    position: relative;
+    &::after {
+      width: 60px;
+      height: 60px;
+      content: "";
+      // position: absolute;
+      background-image: url("/images/like.svg");
+      background-repeat: no-repeat;
+      background-size: 60px;
+      background-position: top right;
+      margin-bottom: 17px;
+      margin-right: -40px;
+    }
+    .title {
+      font-size: $text-2xs;
+      font-weight: $font-semi-bold;
+      line-height: $line-height;
+      text-transform: uppercase;
+      max-width: 76px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: $bg-300;
+      &.title_point {
+        justify-content: left;
+      }
+    }
+  }
+  .body {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
+      width: 100%;
+      height: auto;
+      padding: 8px 12px;
+      .cell {
+        width: 45%;
+        display: flex;
+        justify-content: left;
+        height: inherit ;
+        &.text {
+          font-size: $text-sm;
+          font-weight: $font-normal;
+          line-height: 22px;
+        }
+      }
+    }
+    .row:nth-child(odd) {
+        background-color: #F6FBFF;
+    }
+    .button {
+        margin-top: 20px;
+        display: none;
+    }
+  }
+  @media screen and (max-width: $mobile) {
+    padding: 16px 8px;
+    .body {
+      .button {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@use "styles/variables.scss" as *;
+
+.popup_deal {
+  max-width: 578px;
+  max-height: 370px;
+  position: relative;
+  background-color: $primary-400;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../../public/images/auth-popup1-bg.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-color: $primary-400;
+  background-position: 0 20%;
+  background-size: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: -40px;
+    background: url("../../public/images/auth-popup1-bg-2.svg") no-repeat;
+    width: 73px;
+    height: 63px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    right: -50px;
+    background: url("../../public/images/auth-popup1-bg-3.svg") no-repeat;
+    width: 74px;
+    height: 74px;
+  }
+  .header {
+    position: relative;
+    .title {
+      font-weight: $font-bold;
+      font-size: $text-xl;
+      line-height: $line-height;
+      max-width: 325px;
+      text-align: center;
+      color: $bg-0;
+      margin-bottom: 76px;
+      margin-top: 78px;
+    }
+  } 
+  .options {
+    width: 100%;
+    padding: 0 32px;
+    .button {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .popup_deal {
+    background-position: 0 107%;
+    background-size: 100% 29%;
+    &::after {
+      content: none;
+    }
+    &::before {
+      content: none;
+    }
+    .header {
+      .title {
+        font-size: $text-lg;
+        margin: 38px auto;
+        text-align: center;
+        max-width: 95%;
+      }
+    }
+    .options {
+      margin-bottom: 80px;
+      .button {
+        margin-bottom: 16px;
+      }
+    } 
+  }
+}

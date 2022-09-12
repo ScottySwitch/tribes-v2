@@ -1,0 +1,125 @@
+@import "styles/variables.scss";
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+
+  &_banner {
+    width: 36%;
+    h1, h2, h3, h4, h5, h6 {
+      font-size: revert !important;
+    }
+  }
+
+  &_slider {
+    width: 60% !important;
+    aspect-ratio: 742 / 368 !important;
+    .slider_container { 
+      height: 368px;
+      width: 100%;
+      .banner_card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        video {
+          height: 100%;
+          object-fit: fill;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.images {
+  display: flex;
+  gap: 24px;
+
+  .first_image {
+    width: 48%;
+    position: relative;
+    cursor: pointer;
+    aspect-ratio: 578 / 624;
+  }
+
+  .right {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .second_image {
+      width: 100%;
+      cursor: pointer;
+      aspect-ratio: 578 / 300;
+      position: relative;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .content {
+    flex-direction: column-reverse;
+
+    &_banner {
+      width: 100%;
+    }
+
+    &_slider {
+      width: 100% !important;
+      margin-bottom: 38px;
+    }
+  }
+
+  .images {
+    flex-direction: column;
+    gap: 8px;
+
+    .first_image {
+      width: 100%;
+      aspect-ratio: 343 / 370;
+    }
+
+    .right {
+      width: 100%;
+      gap: 8px;
+      flex-direction: row;
+            
+      .second_image {
+        width: 49%;
+        aspect-ratio: 168 / 87;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile){
+  .banners {
+    width: 100% !important;
+  }
+
+  .content {
+    &_slider {
+      width: 100% !important;
+      margin-bottom: 25px;
+      aspect-ratio: 2 / 1 !important;
+      .slider_container { 
+        height: 195px;
+      }
+    }
+  }
+
+  .images {
+    flex-direction: column;
+    gap: 8px;
+    .right {
+
+      flex-direction: column;
+      .second_image {
+        width: 100%;
+        aspect-ratio: 348 / 178;
+      }
+    }
+  }
+}
