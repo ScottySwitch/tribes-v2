@@ -1,5 +1,22 @@
 @use "./variables.scss" as *;
 
+.item-card {
+  width: calc(100%/6.7) !important;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width:600px) {
+  .item-card {
+    width: calc(100%/2.3) !important;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .item-card {
+    width: 47% !important;
+    min-width: 160px !important;
+  }
+}
 .banner {
   aspect-ratio: 1188 / 400 !important;
   height: unset !important;
@@ -22,11 +39,19 @@
   }
 }
 
+// .lists {
+//   display: grid;
+//   grid-template-columns: repeat(2, minmax(0, 1fr));
+//   column-gap: 0.5rem; 
+//   row-gap: 1rem;
+// }
 .lists {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 0.5rem; 
-  row-gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .item_card {
+    margin-bottom: 15px;
+  }
 }
 
 .scrolling_box_custom {
@@ -38,29 +63,39 @@
   height: 263px;
   position: relative;
 }
-
+.item-card {
+  width: calc(100%/6.7) !important; 
+}
 @media screen and (min-width: $medium-tablet){
   .section_layout {
     padding-bottom: 4rem;
   }
 
-  .lists {
-    column-gap: 1.25rem;
-    row-gap: 2rem;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
+  // .lists {
+  //   column-gap: 1.25rem;
+  //   row-gap: 2rem;
+  //   grid-template-columns: repeat(4, minmax(0, 1fr));
+  // }
 }
 
 @media screen and (min-width: $big-tablet){
-  .lists {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-
-  }
+  // .lists {
+  //   grid-template-columns: repeat(5, minmax(0, 1fr));
+  // }
 }
 
 @media screen and (min-width: $desktop){
+  // .lists {
+  //   grid-template-columns: repeat(6, minmax(0, 1fr));
+  // }
   .lists {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .item_card {
+      width: calc(100%/6.7) !important; 
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -70,8 +105,21 @@
   }
 }
 
+@media screen and (max-width: $small-tablet) {
+  .lists {
+    .item_card {
+      width: 32% !important;
+    }
+  }
+}
 
-
+@media screen and (max-width: 578px) {
+  .lists {
+    .item_card {
+      width: 47% !important;
+    }
+  }
+}
 @media screen and (max-width: $mobile) {
   .scrolling_box_custom {
     width: 100%;

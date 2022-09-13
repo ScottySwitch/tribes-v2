@@ -182,11 +182,11 @@ const PromotionsPage = () => {
               />
               <div className={styles.lists}>
                 {isArray(dataBizlisting) &&
-                  dataBizlisting.map((card, index) => (
+                  dataBizlisting.map((card, index) => ( 
                     <InforCard
-                      key={index}
+                      key={index} 
                       {...formatCardItemProps(card)}
-                      className="w-full"
+                      className={styles.item_card}
                       onClick={() => {
                         router.push(
                           `/${getListingUrl(
@@ -249,7 +249,7 @@ const PromotionsPage = () => {
             <InforCard
               key={index}
               {...card}
-              className="w-full"
+              className={styles.item_card}
               onClick={() => handleOpenDetailModal(card)}
             />
           ))}
@@ -434,7 +434,7 @@ const PromotionsPage = () => {
             <InforCard
               key={index}
               {...formatCardItemProps(card)}
-              className="w-full"
+              className={styles.item_card}
               onClick={() => {
                 router.push(
                   `/${getListingUrl(
