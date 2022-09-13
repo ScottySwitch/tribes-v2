@@ -79,6 +79,8 @@ const ProductDetailModal = (props: ProductDetailsModalProps) => {
                   <div className={styles.price_sale}>
                     <span>
                       {discountPrice}
+                    </span>
+                    <span>
                       {data?.currency && data.currency.toUpperCase()}
                     </span>
                   </div>
@@ -98,6 +100,8 @@ const ProductDetailModal = (props: ProductDetailsModalProps) => {
                 <div className={styles.price_sale}>
                   <span>
                     {data.price}
+                  </span>
+                  <span>
                     {data?.currency && data.currency.toUpperCase()}
                   </span>
                 </div>
