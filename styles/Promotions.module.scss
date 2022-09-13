@@ -54,12 +54,14 @@
 @media screen and (min-width: $big-tablet){
   .lists {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+
   }
 }
 
 @media screen and (min-width: $desktop){
   .lists {
     grid-template-columns: repeat(6, minmax(0, 1fr));
+    display: flex;
   }
 }
 
