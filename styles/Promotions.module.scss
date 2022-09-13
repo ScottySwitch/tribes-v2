@@ -1,22 +1,5 @@
 @use "./variables.scss" as *;
 
-.item-card {
-  width: calc(100%/6.7) !important;
-  margin-bottom: 15px;
-}
-
-@media screen and (max-width:600px) {
-  .item-card {
-    width: calc(100%/2.3) !important;
-  }
-}
-
-@media screen and (max-width:400px) {
-  .item-card {
-    width: 47% !important;
-    min-width: 160px !important;
-  }
-}
 .banner {
   aspect-ratio: 1188 / 400 !important;
   height: unset !important;
