@@ -56,7 +56,7 @@ const getIndex = (value, list) => {
     : -1
 }
 
-const OpenHours = (props: OpeningHoursProps) => {
+const yaOpenHours = (props: OpeningHoursProps) => {
   const { data, onSubmit, onCancel } = props
   const [openHours, setOpeningHours] = useState(
     Array.isArray(data) && data.length > 0 ? data : defaultOpenDays
